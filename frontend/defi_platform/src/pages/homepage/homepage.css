@@ -1,0 +1,153 @@
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap');
+.intro{ 
+    padding: 0;
+    margin: 0;
+    background-image: url('../../assets/Imgs/bg.jpg');
+    width: 100vw;
+    height: 100vh;
+    z-index: -1;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: relative;
+}
+.intro .frame h1{
+    z-index: 0;
+    font-family: 'League Spartan', sans-serif;
+    color: white;
+    font-size: 15vh;
+    margin-left: -50vw;
+    padding-top: 40vh;
+}
+.intro .frame h2{
+    z-index: 0;
+    font-family: 'Josefin Sans', sans-serif;
+    color: white;
+    position: absolute;
+    font-size: 6vh;
+    margin-left: 50vw;
+    padding-right: 10vw;
+    margin-top: -19vh;
+}
+.intro .frame .shapes_div img{
+    position: absolute;
+    z-index: -1;
+    margin-left: -60vw;
+    margin-top: -5vh;
+    width: 100vh;
+}
+.intro .frame .moon_div img{
+    position: absolute;
+    z-index: -1;
+    margin-top: -6vh;
+    margin-left: 30vw;
+    width: 20vw;
+}
+.intro .frame .saturn_div img{
+    position: absolute;
+    z-index: -1;
+    margin-top: -55.5vh;
+    margin-left: 15vw;
+    width: 25vw;
+}
+.intro .frame .astronaut_div img{
+    position: absolute;
+    z-index: -1;
+    margin-top: 55.7vh;
+    margin-left: -14vw;
+    width: 15vw;
+}
+.sections{
+    background-color: white;
+    z-index: 10;
+}
+.sections .handleLine{
+    background-color: black;
+    position: absolute;
+    height: 384.5vh;
+    margin-left: 50vw;
+    width: 0.2vh;
+}
+.sections .row{
+    padding-bottom: 15vh;
+}
+.sections .sec1 .row .cube{
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    margin-left: -14vw;
+    width: 10vw;
+    margin-top: -120vh;
+}
+.Divider{
+    width: 100%;
+    height: 30vh;
+    padding-top: 13vh;
+    color: white;
+    background-color: #1e1e1e;
+}
+.sections .sec1 .row .col-sm{
+    margin-top: 5vh;
+    text-align: left;
+        margin-left: 50vw;
+     padding-left: 10vw;
+        padding-right: 8vw;
+}
+.sections .sec2 .row  .cube{
+    position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+    margin-right: 45vw;
+    width: 10vw;
+    margin-top: 5vh;
+}
+.sections  .sec2 .row  .col-sm{
+        margin-left: 0vw;
+        text-align: right; 
+        padding-left: 6vw;
+}
+.sections .sec3 .row .cube{
+    position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+    margin-left: -14.5vw;
+    width: 10vw;
+    margin-top: -90vh;
+}
+.sections .sec3 .row .col-sm{
+    margin-top: -20vh;
+        margin-left: 50vw;
+        text-align: left;
+        padding-left: 10vw;
+        padding-right: 8vw;
+}
+.sections .sec1 .row .col-sm h2{
+    font-size: 4vw;
+    padding-bottom: 5vh;
+}
+.sections .sec2 .row .col-sm h2{
+    font-size: 4vw;
+    padding-bottom: 5vh;
+}
+.sections .sec3 .row .col-sm h2{
+    font-size: 4vw;
+    padding-bottom: 5vh;
+}
+.sections .sec4 .row .col-sm h2{
+    font-size: 4vw;
+    padding-bottom: 5vh;
+}
+.sections .sec4 .row  .cube{
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    margin-right: 45.3vw;
+    width: 10vw;
+    margin-top: 5vh;
+}
+.sections  .sec4 .row  .col-sm{
+    text-align: right;
+        margin-left: 0vw;
+    padding-left: 6vw;
+}

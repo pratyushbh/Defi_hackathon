@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@700&display=swap');
+.Navbar-brand{
+    font-family: 'League Spartan', sans-serif;
+    font-size: 3vw;
+    background-color:black;
+    padding-top: 2vh;
+    padding-left:3vw;
+    text-decoration: none;
+    color: black;
+    background-image: linear-gradient(-75deg, transparent 0, transparent 5%,rgba(255,255,255,0.5) 5%,rgba(255,255,255,0.5) 10%, transparent 10%, transparent 100%);
+    /* transition: all 300ms ease-in-out; */
+    background-size: 200% 100%;
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    text-decoration: none;
+    transition: 0.4s;
+}
+.Navbar-brand:hover{
+    background-position: -120% 0;
+    text-decoration: dashed;
+    color: black;
+}
+.Navbar-nav{
+    list-style-type: none;
+    padding-left: -2vw;
+    display: flex;
+}
+.Navbar-collapse{
+    padding-left: 15vw;
+}
+.Navbar-collapse a{
+    font-weight: bold;
+    text-decoration: none;
+    color: black;
+}
+.hover-underline-animation {
+    display: inline-block;
+    position: relative;
+    color: black
+  }
+  
+  .hover-underline-animation:after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background: -webkit-linear-gradient(right,#f1a7f1,#fad0c4); 
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+  }
+  
+  .hover-underline-animation:hover:after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+  }
+.Nav-item{
+    padding-top: 3vh;
+    padding-left: 5vw;
+}
+.Navbar{
+    text-align: left;
+    background-color: #eee;
+    display: flex;
+    padding-top:0.2vw;
+}
+.Background-active{
+    background: transparent;
+}
+#walletButton{
+    margin-top: -1.5vh;
+    padding-left: 1vw;
+    padding-right: 1vw;
+    padding-top: 0.5vh;
+    padding-bottom: 0.5vh;
+    border-radius: 45px;
+    color: white;
+    background:  -webkit-linear-gradient(right,#f1a7f1,#fad0c4);;
+    border: 5px solid white;
+}
