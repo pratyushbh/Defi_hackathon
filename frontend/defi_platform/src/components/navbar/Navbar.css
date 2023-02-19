@@ -22,7 +22,7 @@
 }
 .Navbar-nav{
     list-style-type: none;
-    padding-left: -2vw;
+    padding-left: 34vw;
     display: flex;
 }
 .Navbar-collapse{
@@ -58,7 +58,7 @@
   }
 .Nav-item{
     padding-top: 3vh;
-    padding-left: 5vw;
+    padding-left: 2vw;
 }
 .Navbar{
     text-align: left;
@@ -80,3 +80,20 @@
     background:  -webkit-linear-gradient(right,#f1a7f1,#fad0c4);;
     border: 5px solid white;
 }
+#walletButton .tooltipText {
+    visibility: hidden;
+    width: 120px;
+    margin-left: 15px;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    /* Position the tooltip */
+    position: absolute;
+    z-index: 1;
+  }
+#walletButton:hover .tooltipText {
+    transition: 1s;
+    visibility: visible;
+  }

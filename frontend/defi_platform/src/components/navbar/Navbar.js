@@ -1,4 +1,4 @@
-import React,{useState,useEffect} from 'react'
+import React,{useState,useEffect, useContext} from 'react'
 import 'bootstrap/dist/css/bootstrap.min.css';  
 import "./Navbar.css"
 import { motion } from 'framer-motion';
@@ -6,8 +6,11 @@ import { Link } from 'react-router-dom';
 import { SvgIcon } from '@mui/material';
 import AccountBalanceWalletIcon from '@mui/icons-material/AccountBalanceWallet';
 import { grey, pink, red } from '@mui/material/colors';
+import { Tooltip } from 'reactstrap';
+import { Web3Context } from '../../context/web3.context';
 
 const Navbar = () => {
+  const {walletc,setWalletC}= useContext(Web3Context)
   const [walletAddress, setWallet] = useState("");
   const [status, setStatus] = useState("");
   const connectWallet = async () => {
@@ -49,33 +52,20 @@ const Navbar = () => {
     const walletResponse = await connectWallet();
     setStatus(walletResponse.status);
     setWallet(walletResponse.address);
+    setWalletC(walletResponse.address);
+    console.log(walletc);
   };
 
   return (
   <div className='Background-active'>
       <nav className="Navbar">
-      <Link to="/" className='Navbar-brand'>  <h1>WALIFY</h1></Link>
+      <Link to="/" className='Navbar-brand'>  <h1>ARBINOM</h1></Link>
   <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span className="navbar-toggler-icon"></span>
   </button>
 
   <div className="Navbar-collapse" id="NavbarSupportedContent">
     <ul className="Navbar-nav mr-auto">
-      <li className="Nav-item">
-      <motion.div  transition={{delay:0.2}} initial={{ opacity: 0, translateY:-20}} whileInView={{ opacity: 1 ,translateY:0}}  viewport={{ once: true }}>
-       <Link to="/conversion"><p className="hover-underline-animation">Conversion</p></Link>
-      </motion.div>
-      </li>
-      <li className="Nav-item">
-      <motion.div  transition={{delay:0.3}} initial={{ opacity: 0, translateY:-20}} whileInView={{ opacity: 1 ,translateY:0}}  viewport={{ once: true }}>
-      <Link to="/Multi_sig_wallet"> <p className="hover-underline-animation">Multi Sig Wallets</p></Link>
-      </motion.div>
-      </li>
-      <li className="Nav-item">
-      <motion.div  transition={{delay:0.4}} initial={{ opacity: 0, translateY:-20}} whileInView={{ opacity: 1 ,translateY:0}}  viewport={{ once: true }}>
-      <Link to="/StakePool"><p className="hover-underline-animation">Stake Pool</p></Link>
-      </motion.div>
-      </li>
       <li className="Nav-item">
       <motion.div  transition={{delay:0.5}} initial={{ opacity: 0, translateY:-20}} whileInView={{ opacity: 1 ,translateY:0}}  viewport={{ once: true }}>
       <Link to="/FlashLoans"><p className="hover-underline-animation">Flash Loan</p></Link>
@@ -92,6 +82,7 @@ const Navbar = () => {
         ) : (
           <span><SvgIcon component={AccountBalanceWalletIcon} sx={{ color: red[50] }}/> Connect Wallet</span>
         )}
+        <span className='tooltipText'>You connect your metamask<br/> wallet by clicking this </span>
       </button>
       </motion.div>
       </li>

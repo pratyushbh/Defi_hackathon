@@ -2,8 +2,12 @@ import React from 'react'
 import "./Underwork.css";
 import Under_work_2 from "../../assets/Imgs/Under_work_2.png";
 import Under_work_1 from "../../assets/Imgs/Under_work_1.png";
+import { useContext } from 'react';
+import { Web3Context } from '../../context/web3.context';
 
 const Underwork = () => {
+  const {wallet}=useContext(Web3Context);
+  console.log(wallet);
   return (
     <div className='container text-center'>
       <h1 className='under_work_heading'>UNDERWORK</h1>

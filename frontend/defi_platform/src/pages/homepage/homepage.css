@@ -65,12 +65,16 @@
 .sections .handleLine{
     background-color: black;
     position: absolute;
-    height: 384.5vh;
+    height: 310.5vh;
     margin-left: 50vw;
+    z-index: 10;
     width: 0.2vh;
 }
 .sections .row{
     padding-bottom: 15vh;
+}
+.footerH{
+    z-index: 100;
 }
 .sections .sec1 .row .cube{
     position: -webkit-sticky;
